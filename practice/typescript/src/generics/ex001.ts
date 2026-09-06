@@ -36,6 +36,7 @@ function mapArray<T, U>(array: T[], cb: MapProtocol<T, U>): U[] {
  * 🔍 Passe o mouse sobre as constantes para checar os tipos inferidos.
  * ⚙️ Rode o arquivo para validar o comportamento em runtime.
  */
+/* eslint-disable */
 
 // CASO 1: Transformando números em strings (T = number, U = string)
 // Tipo esperado no hover de 'resultado1': string[]
@@ -44,7 +45,7 @@ try {
     const resultado1 = mapArray(numeros, (num) => `num_${num}`);
 
     // Teste de asserção de tipo estático (não deve compilar se o tipo de retorno estiver incorreto)
-    // const checagemEstatica: string[] = resultado1;
+    const checagemEstatica: string[] = resultado1;
 
     const esperado = JSON.stringify(['num_1', 'num_2', 'num_3']);
     const recebido = JSON.stringify(resultado1);
@@ -68,7 +69,7 @@ try {
     const resultado2 = mapArray(pessoas, (p) => p.idade);
 
     // Teste de asserção de tipo estático
-    // const checagemEstatica: number[] = resultado2;
+    const checagemEstatica: number[] = resultado2;
 
     const esperado = JSON.stringify([30, 25]);
     const recebido = JSON.stringify(resultado2);

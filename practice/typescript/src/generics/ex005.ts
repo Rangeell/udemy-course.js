@@ -23,6 +23,7 @@ function attProperty<O, K extends keyof O>(obj: O, key: K, value: O[K]): void { 
  * 🔍 Passe o mouse sobre as constantes para checar os tipos inferidos.
  * ⚙️ Rode o arquivo para validar o comportamento em runtime.
  */
+/* eslint-disable */
 
 interface Produto {
     id: number;
@@ -59,8 +60,8 @@ try {
 // Se a tipagem estiver correta, a linha com @ts-expect-error DEVE acusar erro estático,
 // pois a propriedade 'preco' não existe no tipo 'Produto'.
 try {
-    //// @ts-expect-error: 'preco' não existe na interface Produto
-    //// const preco = getProperty(celular, 'preco');
+    // @ts-expect-error: 'preco' não existe na interface Produto
+    const preco = getProperty(celular, 'preco');
     console.log('✅ Caso 2: verificação estática ok (chave inexistente bloqueada)');
 } catch (error: unknown) {
     console.log('❌ Caso 2 (erro inesperado):', error);

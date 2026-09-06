@@ -36,6 +36,7 @@ const getProperty = <T, U extends keyof T>(obj: T, key: U): T[U] => obj[key];
  * - 🔍 Passe o mouse sobre as constantes para checar os tipos inferidos.
  * - ⚙️ Rode o arquivo para validar o comportamento em runtime.
  */
+/* eslint-disable */
 
 // CASO 1: Acessando uma propriedade string
 // Tipo esperado no hover de 'nome': string
@@ -49,7 +50,7 @@ try {
     const nome = getProperty(user, 'nome');
 
     // Checagem estática
-    // const checagemEstatica: string = nome;
+    const checagemEstatica: string = nome;
 
     console.log(
         nome === 'Rangel'
@@ -75,8 +76,8 @@ try {
     const ativo = getProperty(user, 'ativo');
 
     // Checagens estáticas
-    // const checagemId: number = id;
-    // const checagemAtivo: boolean = ativo;
+    const checagemId: number = id;
+    const checagemAtivo: boolean = ativo;
 
     console.log(
         id === 42 && ativo === true
@@ -92,8 +93,9 @@ try {
 //
 // A linha abaixo DEVE gerar erro de TypeScript.
 // Descomente temporariamente para verificar se o compilador rejeita.
-//
-// const erro = getProperty(user, 'email');
+
+//// const erro = getProperty(user, 'email');
+
 // Tipo esperado: erro de compilação porque 'email' não é uma chave de user.
 
 // CASO 4: União de tipos de propriedade
@@ -111,7 +113,7 @@ try {
 
     // Checagem estática:
     // o retorno precisa ser string | number
-    // const checagemEstatica: string | number = resultado;
+    const checagemEstatica: string | number = resultado;
 
     console.log(
         resultado === 'Keyboard' || resultado === 250
@@ -136,8 +138,8 @@ try {
     const age = getProperty(person, 'age');
 
     // Checagens estáticas
-    // const checagemEmail: string = email;
-    // const checagemAge: number = age;
+    const checagemEmail: string = email;
+    const checagemAge: number = age;
 
     console.log(
         email === 'carlos@email.com' && age === 30

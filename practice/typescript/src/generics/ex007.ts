@@ -1,5 +1,5 @@
 /*
-EXERCISE 007: A Fila Genérica (FIFO Queue) | Dificulty: Medium-High
+EXERCISE 007: The Generic Queue (FIFO Queue) | Dificulty: 🟠 Medium-High
 
 Assuntos abordados: Generics com Classes, Index Signatures ([key: number]: T), lógica FIFO (First-In, First-Out).
 
@@ -61,7 +61,7 @@ class Queue<T> implements QueueProtocol<T> {
 
 /**
  * =========================================================================
- * SUÍTE DE TESTES: EXERCISE 007 - A Fila Genérica (FIFO)
+ * SUÍTE DE TESTES: EXERCISE 007 - The Generic Queue (FIFO)
  * =========================================================================
  * Cole este bloco abaixo da sua implementação.
  * 🔍 Passe o mouse sobre as constantes para checar os tipos inferidos.
