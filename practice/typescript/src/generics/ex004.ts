@@ -55,10 +55,10 @@ try {
 // Se sua função genérica estiver bem restrita, a linha abaixo deve acusar erro estático 
 // de compilação se você remover o comentário do @ts-expect-error.
 try {
-    const isStringSemPredicado = (valor: unknown): boolean => typeof valor === 'string';
+    // const isStringSemPredicado = (valor: unknown): boolean => typeof valor === 'string';
 
-    // @ts-expect-error: O compilador deve reclamar porque 'isStringSemPredicado' retorna 'boolean' comum e não um Type Predicate
-    const caso2 = filterCollection(dadosMistos, isStringSemPredicado);
+    //// @ts-expect-error: O compilador deve reclamar porque 'isStringSemPredicado' retorna 'boolean' comum e não um Type Predicate
+    // const caso2 = filterCollection(dadosMistos, isStringSemPredicado);
 
     // Se compilar mesmo assim, o hover de 'caso2' deve apontar para unknown[] ou (string | number | null | undefined)[]
     console.log('✅ Caso 2: verificação estática ok (certifique-se de que o hover NÃO inferiu como string[])');

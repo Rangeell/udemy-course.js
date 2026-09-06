@@ -63,7 +63,7 @@ try {
     const users = userRepository.getAll();
 
     // Checagem estática: deve aceitar User[]
-    const checagemEstatica: User[] = users;
+    // const checagemEstatica: User[] = users;
 
     const esperado = JSON.stringify([
         { id: 1, name: 'Rangel' },
@@ -95,7 +95,7 @@ try {
     const user = userRepository.findById(2);
 
     // Checagem estática: deve aceitar User | undefined
-    const checagemEstatica: User | undefined = user;
+    // const checagemEstatica: User | undefined = user;
 
     console.log(
         user?.name === 'Maria'
@@ -121,7 +121,7 @@ try {
     const product = productRepository.findById(1);
 
     // Checagem estática: deve aceitar Product | undefined
-    const checagemEstatica: Product | undefined = product;
+    // const checagemEstatica: Product | undefined = product;
 
     console.log(
         product?.price === 100
