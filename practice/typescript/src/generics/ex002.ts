@@ -28,7 +28,7 @@ class Repository<T extends { id: number }> implements RepositoryProtocol<T> {
     private repository: T[] = [];
 
     add(item: T): void { this.repository.push(item); }
-    getAll(): T[] { return [... this.repository]; }
+    getAll(): T[] { return [...this.repository]; }
 
     findById(id: number): T | undefined {
         const requiredElement = this.repository.find(v => v.id === id);
